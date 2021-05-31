@@ -10,6 +10,7 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 Install Electron Packager globally are required to. To create the installers some libs are optional.
 
 **- To build for Debian the electron-installer-debian are required.**
+
 **- To build a setup installer for Windows the electron-installer-windows are required.**
 
 ```bash
