@@ -2,6 +2,7 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const server = require('./src/server')
+const config = require('./src/config')
 
 function createWindow () {
   // Create the browser window.
@@ -12,9 +13,9 @@ function createWindow () {
       preload: path.join(__dirname, 'preload.js')
     }
   })
-
-  // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  
+  // load the index.html from web server.
+  mainWindow.loadURL(`http://localhost:${config.serverPort}`);
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
@@ -25,7 +26,7 @@ function createWindow () {
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
   createWindow()
-  server.startServer(5050)
+  server.startServer(config.serverPort)
   
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
