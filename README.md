@@ -13,8 +13,11 @@ Install Electron Packager globally are required to. To create the installers som
 
 **- To build a setup installer for Windows the electron-installer-windows are required.**
 
+**PS: Install Electron libraries globally is a easier way to make things work on Windows**
+
 ```bash
-# After Node JS installed use NPM to install Electron Packager Globally
+# After Node JS installed use NPM to install Electron and Electron Packager Globally
+npm install electron -g
 npm install electron-packager -g
 # Debian installer
 npm install electron-installer-debian -g

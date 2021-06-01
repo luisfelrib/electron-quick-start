@@ -21,9 +21,6 @@
     "demo"
   ],
   "author": "Luis Felipe",
-  "devDependencies": {
-    "electron": "^12.0.8"
-  },
   "dependencies": {
     "express": "^4.17.1",
     "socket.io": "^4.1.2"
